@@ -4,6 +4,39 @@ This project is an airline ticketing system developed using Python (Flask). It p
 
 ---
 
+## 🔗 Source Code
+
+The full source code of this project can be found on GitHub:  
+👉 [GitHub Repository](https://github.com/dogasac/airline-api)
+
+---
+
+## 🧠 Design, Assumptions & Challenges
+
+### 📐 Design
+- RESTful service-based architecture.
+- Authentication handled using JWT (Flask-JWT-Extended).
+- Separation of concerns via DTO and Service layers.
+- PostgreSQL used as a relational cloud database.
+
+### ✅ Assumptions
+- Date inputs are handled in `YYYY-MM-DD` format only (time is excluded).
+- Seat number is assigned manually during ticket purchase.
+- Each user can only check-in if they have a valid ticket.
+
+### 🐞 Challenges
+- Cold start delay on Render: When using the free tier on Render, the application goes into sleep mode after a period of inactivity. This causes the first request to take around 30–50 seconds to respond.
+- Bearer Token input via Swagger: The Swagger UI required manual input of the JWT token, which was time-consuming during repeated testing.
+- Error handling for incorrect data formats: In Swagger or CURL requests, incorrect date formats (e.g., 2025/04/20 instead of 2025-04-20) led to request validation errors.
+---
+
+## 🎥 Project Video
+
+A short demo video of the project is available on Google Drive:  
+👉 [Watch Video Demo](https://drive.google.com/your-video-link)
+
+---
+
 ## Technologies Used
 
 | Technology        | Description                                     |
@@ -20,37 +53,10 @@ This project is an airline ticketing system developed using Python (Flask). It p
 
 ---
 
-## 🗂️ Project Structure
-
-```
-airline-api/
-│
-├── app/
-│   ├── models/               # SQLAlchemy models
-│   ├── services/             # Application logic (business layer)
-│   ├── dtos/                 # Data Transfer Objects
-│   ├── controllers/          # Blueprint API endpoints
-│   ├── routes/               # Additional route definitions
-│   ├── extensions.py         # db, jwt, and other extensions
-│   └── __init__.py           # Application creator
-│
-├── config.py                 # Application configuration
-├── run.py                    # Application launcher
-├── .env                      # Environment variables
-├── requirements.txt          # Required dependencies
-├── Procfile                  # Render deployment file
-└── README.md                 # This file
-```
-
----
-
 ## 🛢️ Database (Render PostgreSQL)
 
 - PostgreSQL hosted on Render is used.
 - The `DATABASE_URL` is stored in the `.env` file.
-
-Here’s how you can format the section for the README to clearly represent the entities and their attributes, as well as the relationships between them:
-
 ---
 
 ## **Database Entities**
@@ -80,6 +86,10 @@ Here’s how you can format the section for the README to clearly represent the 
 - **ticket_id** (Foreign Key referencing **Ticket.id**): The ticket associated with the check-in.
 - **checkin_time** (Date, Not Null): The date when the passenger checked in.
 ---
+
+## 🗃️ ER Diagram (Data Model)
+
+![ER Diagram](er_diagram.png)
 
 ## 🧪 Swagger API Documentation
 
