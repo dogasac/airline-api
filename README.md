@@ -85,7 +85,7 @@ Here’s how you can format the section for the README to clearly represent the 
 
 You can explore the API documentation via:
 
-[Swagger API Documentation](https://airline-api-lx1v.onrender.com/swagger/)
+[Swagger API Documentation](https://airline-api-m1vn.onrender.com/swagger)
 
 ---
 
