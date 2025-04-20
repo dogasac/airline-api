@@ -101,23 +101,6 @@ You can explore the API documentation via:
 - **DTO (Data Transfer Object)**: Templates for request and response data, used for transferring data between controller and service.
 - **Service**: Contains the business logic, independent of the controller.
 
-**Example DTO:**
-```python
-class AddFlightDTO:
-    def __init__(self, departure, arrival, date, quota):
-        self.departure = departure
-        self.arrival = arrival
-        self.date = date
-        self.quota = quota
-```
-
-**Example Service:**
-```python
-class FlightService:
-    def add_flight(dto: AddFlightDTO):
-        ...
-```
-
 ---
 
 ## ✈️ API Features
