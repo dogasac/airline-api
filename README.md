@@ -119,7 +119,7 @@ You can explore the API documentation via:
 
 ## ✈️ API Features
 
-- `POST /api/v1/auth/login` → User login
+- `POST /api/v1/auth/login` → User login for authentication
 - `POST /api/v1/flight/add` → Add flight (JWT required)
 - `POST /api/v1/ticket/buy` → Buy a ticket
 - `POST /api/v1/checkin/{ticket_id}` → Check-in process
