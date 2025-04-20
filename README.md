@@ -89,7 +89,7 @@ A short demo video of the project is available on Google Drive:
 
 ## 🗃️ ER Diagram (Data Model)
 
-![ER Diagram](er_diagram.png)
+![ER Diagram](https://github.com/dogasac/airline-api/blob/main/AirlineAPI_ERDiagram.png)
 
 ## 🧪 Swagger API Documentation
 
