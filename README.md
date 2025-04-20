@@ -79,12 +79,16 @@ A short demo video of the project is available on Google Drive:
 - **id** (Primary Key, Auto Increment): Unique identifier for each ticket.
 - **user_id** (Foreign Key referencing **User.id**): The user who purchased the ticket.
 - **flight_number** (Foreign Key referencing **Flight.flight_number**): The flight that the ticket is for.
-- **seat_number** (Integer, Not Null): The seat number assigned to the passenger.
+- **passenger_name** (String, 255, Not Null): The name of the passenger assigned to the ticket.
+- **ticket_number** (String, 20, Unique, Not Null): A unique identifier for the ticket.
+- **date** (Date, Not Null): The date when the ticket was issued.
 
 ### **Checkin**
 - **id** (Primary Key): Unique identifier for each check-in record.
-- **ticket_id** (Foreign Key referencing **Ticket.id**): The ticket associated with the check-in.
-- **checkin_time** (Date, Not Null): The date when the passenger checked in.
+- **flight_number** (Foreign Key referencing **Flight.flight_number**): The flight number associated with the check-in.
+- **passenger_name** (String, 255, Not Null): The name of the passenger checking in.
+- **date** (Date, Not Null): The date when the check-in was done.
+- **seat_number** (Integer, Not Null): The seat number assigned to the passenger for this check-in.
 ---
 
 ## 🗃️ ER Diagram (Data Model)
