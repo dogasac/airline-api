@@ -33,7 +33,7 @@ The full source code of this project can be found on GitHub:
 ## 🎥 Project Video
 
 A short demo video of the project is available on Google Drive:  
-👉 [Watch Video Demo](https://drive.google.com/your-video-link)
+👉 [Watch Video Demo](https://drive.google.com/file/d/1g8K-nrOrTW9CjI2JNobpJ0fPH6wqDXpt/view?usp=sharing)
 
 ---
 
