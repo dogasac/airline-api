@@ -49,34 +49,36 @@ airline-api/
 - PostgreSQL hosted on Render is used.
 - The `DATABASE_URL` is stored in the `.env` file.
 
-### 📋 ER Model (Entity Relationship)
+Here’s how you can format the section for the README to clearly represent the entities and their attributes, as well as the relationships between them:
 
-```text
-User
-- id (PK)
-- username
-- password
+---
 
-Flight
-- id (PK)
-- departure
-- arrival
-- date
-- quota
+## **Database Entities**
 
-Ticket
-- id (PK)
-- user_id (FK)
-- flight_id (FK)
-- seat_number
+### **User**
+- **id** (Primary Key): Unique identifier for each user.
+- **username** (Unique, Not Null): The user's username, which must be unique.
+- **password** (Not Null): The user's password.
 
+### **Flight**
+- **flight_number** (Primary Key): Unique identifier for each flight.
+- **airport_from** (String, 50 characters): The departure airport.
+- **airport_to** (String, 50 characters): The arrival airport.
+- **date_from** (Date): The departure date.
+- **date_to** (Date): The arrival date.
+- **duration** (Integer): The flight duration in minutes.
+- **capacity** (Integer): The total number of seats available on the flight.
 
-Checkin
-- id (PK)
-- ticket_id (FK)
-- checkin_time
-```
+### **Ticket**
+- **id** (Primary Key, Auto Increment): Unique identifier for each ticket.
+- **user_id** (Foreign Key referencing **User.id**): The user who purchased the ticket.
+- **flight_number** (Foreign Key referencing **Flight.flight_number**): The flight that the ticket is for.
+- **seat_number** (Integer, Not Null): The seat number assigned to the passenger.
 
+### **Checkin**
+- **id** (Primary Key): Unique identifier for each check-in record.
+- **ticket_id** (Foreign Key referencing **Ticket.id**): The ticket associated with the check-in.
+- **checkin_time** (Date, Not Null): The date when the passenger checked in.
 ---
 
 ## 🧪 Swagger API Documentation
